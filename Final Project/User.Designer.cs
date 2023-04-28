@@ -64,6 +64,10 @@
             this.btnSeeSchedule = new System.Windows.Forms.Button();
             this.txtSchedule = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblDeleted = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnEnter = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -240,6 +244,10 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblDeleted);
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.btnEnter);
+            this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.txtEmail);
             this.tabPage3.Controls.Add(this.label6);
@@ -268,7 +276,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(158, 360);
+            this.label7.Location = new System.Drawing.Point(193, 360);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(152, 15);
             this.label7.TabIndex = 17;
@@ -318,9 +326,9 @@
             // 
             this.btnScheduleMade.Location = new System.Drawing.Point(23, 356);
             this.btnScheduleMade.Name = "btnScheduleMade";
-            this.btnScheduleMade.Size = new System.Drawing.Size(100, 23);
+            this.btnScheduleMade.Size = new System.Drawing.Size(130, 23);
             this.btnScheduleMade.TabIndex = 10;
-            this.btnScheduleMade.Text = "Make Schedule";
+            this.btnScheduleMade.Text = "Change Schedule";
             this.btnScheduleMade.UseVisualStyleBackColor = true;
             this.btnScheduleMade.Click += new System.EventHandler(this.btnScheduleMade_Click);
             // 
@@ -406,6 +414,42 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter the date of Schedule";
             // 
+            // lblDeleted
+            // 
+            this.lblDeleted.AutoSize = true;
+            this.lblDeleted.Location = new System.Drawing.Point(212, 197);
+            this.lblDeleted.Name = "lblDeleted";
+            this.lblDeleted.Size = new System.Drawing.Size(148, 15);
+            this.lblDeleted.TabIndex = 40;
+            this.lblDeleted.Text = "Schedule has been Deleted";
+            this.lblDeleted.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(23, 189);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 23);
+            this.textBox1.TabIndex = 39;
+            // 
+            // btnEnter
+            // 
+            this.btnEnter.Location = new System.Drawing.Point(36, 229);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnEnter.TabIndex = 38;
+            this.btnEnter.Text = "Enter";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(23, 171);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(163, 15);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "Enter Date you want to Delete";
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -463,5 +507,9 @@
         private Label label13;
         private Label lblAppointment;
         private Label lblWelcome;
+        private Label lblDeleted;
+        private TextBox textBox1;
+        private Button btnEnter;
+        private Label label14;
     }
 }

@@ -30,9 +30,12 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.lblAppointment = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtEmailSchedule = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.lblOutput = new System.Windows.Forms.Label();
             this.btnScheduleEnter = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,6 +47,8 @@
             this.txtFirstSchedule = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblScheduleUpdate = new System.Windows.Forms.Label();
@@ -64,11 +69,10 @@
             this.btnCheckSchedule = new System.Windows.Forms.Button();
             this.txtSchedule = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtEmailSchedule = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblWelcome = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnEnter = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblDeleted = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -83,7 +87,7 @@
             this.tabControl1.Location = new System.Drawing.Point(9, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(826, 498);
+            this.tabControl1.Size = new System.Drawing.Size(826, 637);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -94,10 +98,21 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(818, 470);
+            this.tabPage1.Size = new System.Drawing.Size(818, 609);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.BackColor = System.Drawing.Color.White;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblWelcome.Location = new System.Drawing.Point(6, 17);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(0, 40);
+            this.lblWelcome.TabIndex = 2;
             // 
             // lblAppointment
             // 
@@ -132,10 +147,26 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(818, 470);
+            this.tabPage2.Size = new System.Drawing.Size(818, 609);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Make Schedule";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtEmailSchedule
+            // 
+            this.txtEmailSchedule.Location = new System.Drawing.Point(45, 354);
+            this.txtEmailSchedule.Name = "txtEmailSchedule";
+            this.txtEmailSchedule.Size = new System.Drawing.Size(153, 23);
+            this.txtEmailSchedule.TabIndex = 12;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(45, 336);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 15);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Email";
             // 
             // lblOutput
             // 
@@ -220,6 +251,10 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblDeleted);
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.btnEnter);
+            this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.txtEmail);
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.label11);
@@ -245,10 +280,26 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(818, 470);
+            this.tabPage3.Size = new System.Drawing.Size(818, 609);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check Schedule";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(663, 375);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(149, 23);
+            this.txtEmail.TabIndex = 32;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(663, 357);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(36, 15);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Email";
             // 
             // label11
             // 
@@ -274,6 +325,7 @@
             this.lblScheduleUpdate.Size = new System.Drawing.Size(152, 15);
             this.lblScheduleUpdate.TabIndex = 28;
             this.lblScheduleUpdate.Text = "Schedule has been updated";
+            this.lblScheduleUpdate.Visible = false;
             // 
             // lblPersonSchedule
             // 
@@ -330,7 +382,7 @@
             this.btnScheduleMade.Name = "btnScheduleMade";
             this.btnScheduleMade.Size = new System.Drawing.Size(124, 23);
             this.btnScheduleMade.TabIndex = 21;
-            this.btnScheduleMade.Text = "Make Schedule";
+            this.btnScheduleMade.Text = "Change Schedule";
             this.btnScheduleMade.UseVisualStyleBackColor = true;
             this.btnScheduleMade.Click += new System.EventHandler(this.btnScheduleMade_Click);
             // 
@@ -415,54 +467,47 @@
             this.label10.TabIndex = 11;
             this.label10.Text = "Enter the date of Schedule";
             // 
-            // label14
+            // label13
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(45, 336);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 15);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "Email";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 510);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(163, 15);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Enter Date you want to Delete";
             // 
-            // txtEmailSchedule
+            // btnEnter
             // 
-            this.txtEmailSchedule.Location = new System.Drawing.Point(45, 354);
-            this.txtEmailSchedule.Name = "txtEmailSchedule";
-            this.txtEmailSchedule.Size = new System.Drawing.Size(153, 23);
-            this.txtEmailSchedule.TabIndex = 12;
+            this.btnEnter.Location = new System.Drawing.Point(19, 568);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnEnter.TabIndex = 34;
+            this.btnEnter.Text = "Enter";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
-            // label15
+            // textBox1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(663, 357);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 15);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Email";
+            this.textBox1.Location = new System.Drawing.Point(6, 528);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 23);
+            this.textBox1.TabIndex = 35;
             // 
-            // txtEmail
+            // lblDeleted
             // 
-            this.txtEmail.Location = new System.Drawing.Point(663, 375);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(149, 23);
-            this.txtEmail.TabIndex = 32;
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.BackColor = System.Drawing.Color.White;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblWelcome.Location = new System.Drawing.Point(6, 17);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(0, 40);
-            this.lblWelcome.TabIndex = 2;
+            this.lblDeleted.AutoSize = true;
+            this.lblDeleted.Location = new System.Drawing.Point(195, 536);
+            this.lblDeleted.Name = "lblDeleted";
+            this.lblDeleted.Size = new System.Drawing.Size(148, 15);
+            this.lblDeleted.TabIndex = 36;
+            this.lblDeleted.Text = "Schedule has been Deleted";
+            this.lblDeleted.Visible = false;
             // 
             // Owner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 516);
+            this.ClientSize = new System.Drawing.Size(847, 655);
             this.Controls.Add(this.tabControl1);
             this.Name = "Owner";
             this.Text = "Owner";
@@ -520,5 +565,9 @@
         private TextBox txtEmail;
         private Label label15;
         private Label lblWelcome;
+        private TextBox textBox1;
+        private Button btnEnter;
+        private Label label13;
+        private Label lblDeleted;
     }
 }

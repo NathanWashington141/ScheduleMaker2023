@@ -81,7 +81,7 @@
             this.tpSign.Padding = new System.Windows.Forms.Padding(3);
             this.tpSign.Size = new System.Drawing.Size(790, 417);
             this.tpSign.TabIndex = 0;
-            this.tpSign.Text = "Sign In";
+            this.tpSign.Text = "Sign Up";
             this.tpSign.UseVisualStyleBackColor = true;
             // 
             // txtLast
