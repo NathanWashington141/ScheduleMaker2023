@@ -47,6 +47,10 @@
             this.txtFirstSchedule = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblDeleted = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnEnter = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -58,7 +62,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtEnd = new System.Windows.Forms.TextBox();
             this.txtBegin = new System.Windows.Forms.TextBox();
-            this.btnScheduleMade = new System.Windows.Forms.Button();
+            this.btnScheduleChange = new System.Windows.Forms.Button();
             this.txtAttendees = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtStarting = new System.Windows.Forms.TextBox();
@@ -69,10 +73,6 @@
             this.btnCheckSchedule = new System.Windows.Forms.Button();
             this.txtSchedule = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnEnter = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblDeleted = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -154,7 +154,7 @@
             // 
             // txtEmailSchedule
             // 
-            this.txtEmailSchedule.Location = new System.Drawing.Point(45, 354);
+            this.txtEmailSchedule.Location = new System.Drawing.Point(6, 382);
             this.txtEmailSchedule.Name = "txtEmailSchedule";
             this.txtEmailSchedule.Size = new System.Drawing.Size(153, 23);
             this.txtEmailSchedule.TabIndex = 12;
@@ -162,7 +162,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(45, 336);
+            this.label14.Location = new System.Drawing.Point(6, 364);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(36, 15);
             this.label14.TabIndex = 11;
@@ -170,14 +170,14 @@
             // 
             // lblOutput
             // 
-            this.lblOutput.Location = new System.Drawing.Point(290, 146);
+            this.lblOutput.Location = new System.Drawing.Point(251, 174);
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(260, 192);
             this.lblOutput.TabIndex = 10;
             // 
             // btnScheduleEnter
             // 
-            this.btnScheduleEnter.Location = new System.Drawing.Point(45, 423);
+            this.btnScheduleEnter.Location = new System.Drawing.Point(6, 451);
             this.btnScheduleEnter.Name = "btnScheduleEnter";
             this.btnScheduleEnter.Size = new System.Drawing.Size(112, 23);
             this.btnScheduleEnter.TabIndex = 9;
@@ -188,7 +188,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(45, 270);
+            this.label9.Location = new System.Drawing.Point(6, 298);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 15);
             this.label9.TabIndex = 8;
@@ -196,7 +196,7 @@
             // 
             // txtAddressSchedule
             // 
-            this.txtAddressSchedule.Location = new System.Drawing.Point(45, 288);
+            this.txtAddressSchedule.Location = new System.Drawing.Point(6, 316);
             this.txtAddressSchedule.Name = "txtAddressSchedule";
             this.txtAddressSchedule.Size = new System.Drawing.Size(153, 23);
             this.txtAddressSchedule.TabIndex = 7;
@@ -204,7 +204,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 199);
+            this.label5.Location = new System.Drawing.Point(6, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 15);
             this.label5.TabIndex = 6;
@@ -213,7 +213,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 128);
+            this.label4.Location = new System.Drawing.Point(6, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 15);
             this.label4.TabIndex = 5;
@@ -221,21 +221,21 @@
             // 
             // txtAttendessSchedule
             // 
-            this.txtAttendessSchedule.Location = new System.Drawing.Point(45, 217);
+            this.txtAttendessSchedule.Location = new System.Drawing.Point(6, 245);
             this.txtAttendessSchedule.Name = "txtAttendessSchedule";
             this.txtAttendessSchedule.Size = new System.Drawing.Size(153, 23);
             this.txtAttendessSchedule.TabIndex = 4;
             // 
             // txtDateSchedule
             // 
-            this.txtDateSchedule.Location = new System.Drawing.Point(45, 146);
+            this.txtDateSchedule.Location = new System.Drawing.Point(6, 174);
             this.txtDateSchedule.Name = "txtDateSchedule";
             this.txtDateSchedule.Size = new System.Drawing.Size(153, 23);
             this.txtDateSchedule.TabIndex = 3;
             // 
             // txtFirstSchedule
             // 
-            this.txtFirstSchedule.Location = new System.Drawing.Point(45, 76);
+            this.txtFirstSchedule.Location = new System.Drawing.Point(6, 104);
             this.txtFirstSchedule.Name = "txtFirstSchedule";
             this.txtFirstSchedule.Size = new System.Drawing.Size(153, 23);
             this.txtFirstSchedule.TabIndex = 2;
@@ -243,7 +243,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 58);
+            this.label3.Location = new System.Drawing.Point(6, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 15);
             this.label3.TabIndex = 1;
@@ -266,7 +266,7 @@
             this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Controls.Add(this.txtEnd);
             this.tabPage3.Controls.Add(this.txtBegin);
-            this.tabPage3.Controls.Add(this.btnScheduleMade);
+            this.tabPage3.Controls.Add(this.btnScheduleChange);
             this.tabPage3.Controls.Add(this.txtAttendees);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.txtStarting);
@@ -284,6 +284,42 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check Schedule";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblDeleted
+            // 
+            this.lblDeleted.AutoSize = true;
+            this.lblDeleted.Location = new System.Drawing.Point(195, 536);
+            this.lblDeleted.Name = "lblDeleted";
+            this.lblDeleted.Size = new System.Drawing.Size(148, 15);
+            this.lblDeleted.TabIndex = 36;
+            this.lblDeleted.Text = "Schedule has been Deleted";
+            this.lblDeleted.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 528);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 23);
+            this.textBox1.TabIndex = 35;
+            // 
+            // btnEnter
+            // 
+            this.btnEnter.Location = new System.Drawing.Point(19, 568);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnEnter.TabIndex = 34;
+            this.btnEnter.Text = "Enter";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 510);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(163, 15);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Enter Date you want to Delete";
             // 
             // txtEmail
             // 
@@ -376,15 +412,15 @@
             this.txtBegin.Size = new System.Drawing.Size(168, 23);
             this.txtBegin.TabIndex = 22;
             // 
-            // btnScheduleMade
+            // btnScheduleChange
             // 
-            this.btnScheduleMade.Location = new System.Drawing.Point(19, 423);
-            this.btnScheduleMade.Name = "btnScheduleMade";
-            this.btnScheduleMade.Size = new System.Drawing.Size(124, 23);
-            this.btnScheduleMade.TabIndex = 21;
-            this.btnScheduleMade.Text = "Change Schedule";
-            this.btnScheduleMade.UseVisualStyleBackColor = true;
-            this.btnScheduleMade.Click += new System.EventHandler(this.btnScheduleMade_Click);
+            this.btnScheduleChange.Location = new System.Drawing.Point(19, 423);
+            this.btnScheduleChange.Name = "btnScheduleChange";
+            this.btnScheduleChange.Size = new System.Drawing.Size(124, 23);
+            this.btnScheduleChange.TabIndex = 21;
+            this.btnScheduleChange.Text = "Change Schedule";
+            this.btnScheduleChange.UseVisualStyleBackColor = true;
+            this.btnScheduleChange.Click += new System.EventHandler(this.btnScheduleChange_Click);
             // 
             // txtAttendees
             // 
@@ -467,42 +503,6 @@
             this.label10.TabIndex = 11;
             this.label10.Text = "Enter the date of Schedule";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 510);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(163, 15);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "Enter Date you want to Delete";
-            // 
-            // btnEnter
-            // 
-            this.btnEnter.Location = new System.Drawing.Point(19, 568);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(75, 23);
-            this.btnEnter.TabIndex = 34;
-            this.btnEnter.Text = "Enter";
-            this.btnEnter.UseVisualStyleBackColor = true;
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 528);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 23);
-            this.textBox1.TabIndex = 35;
-            // 
-            // lblDeleted
-            // 
-            this.lblDeleted.AutoSize = true;
-            this.lblDeleted.Location = new System.Drawing.Point(195, 536);
-            this.lblDeleted.Name = "lblDeleted";
-            this.lblDeleted.Size = new System.Drawing.Size(148, 15);
-            this.lblDeleted.TabIndex = 36;
-            this.lblDeleted.Text = "Schedule has been Deleted";
-            this.lblDeleted.Visible = false;
-            // 
             // Owner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -528,7 +528,7 @@
         private TabPage tabPage1;
         private TabPage tabPage2;
         private TabPage tabPage3;
-        private Button btnScheduleMade;
+        private Button btnScheduleChange;
         private TextBox txtAttendees;
         private Label label6;
         private TextBox txtStarting;

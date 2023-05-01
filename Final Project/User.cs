@@ -22,17 +22,17 @@ namespace Final_Project
 
         }
 
-        private void btnSeeSchedule_Click(object sender, EventArgs e)
+        private void btnScheduleChange_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnEnter_Click(object sender, EventArgs e)
+        private void btnCheckSchedule_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnScheduleMade_Click(object sender, EventArgs e)
+        private void btnScheduleDeleted_Click(object sender, EventArgs e)
         {
 
         }

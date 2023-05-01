@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Final_Project
+namespace EF_Final_Project
 {
-    public partial class Owner : Form
+    public partial class User : Form
     {
-        public Owner()
+        public User()
         {
             InitializeComponent();
         }
@@ -27,17 +27,12 @@ namespace Final_Project
 
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEnter_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnScheduleChange_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnScheduleDeleted_Click(object sender, EventArgs e)
         {
 
         }

@@ -16,17 +16,20 @@ namespace Final_Project
 
         public string Password { get; set; }
 
-        public string ConfirmPassword { get; set; }
+        public bool ConfirmPassword { get; set; }
 
         public string Email { get; set; }
 
-        public Login(string firstName, string lastName, string password, string confirmPassword, string email)
+        public DateTime TimeOfMeeting { get; set; }
+
+        public Login(string firstName, string lastName, string password, bool confirmPassword, string email, DateTime timeOfMeeting)
         {
             FirstName = firstName;
             LastName = lastName;
             Password = password;
             ConfirmPassword = confirmPassword;
             Email = email;
+            TimeOfMeeting = timeOfMeeting;
         }
     }
 }

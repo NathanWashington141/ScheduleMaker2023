@@ -20,7 +20,7 @@ namespace Final_Project
         {
              modelBuilder.Entity<Login>().HasData
                 (
-                new Login { FirstName = "Nathan", LastName = "Washington", Password = "WhyAreYouLooking", ConfirmPassword = "WhyAreYouLooking", Email = "NateSoRealEmail@gmail.com" }
+                new Login { FirstName = "Nathan", LastName = "Washington", Password = "WhyAreYouLooking", ConfirmPassword = false, Email = "NateSoRealEmail@gmail.com"  }
                 );
         }
     }
