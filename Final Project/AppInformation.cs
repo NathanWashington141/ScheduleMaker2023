@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,8 +20,8 @@ namespace Final_Project
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
              modelBuilder.Entity<Login>().HasData
-                (
-                new Login { FirstName = "Nathan", LastName = "Washington", Password = "WhyAreYouLooking", ConfirmPassword = false, Email = "NateSoRealEmail@gmail.com"  }
+            (
+                new Login { LoginId = 1, FirstName = "Nathan", LastName = "Washington", Password = "WhyAreYouLooking", ConfirmPassword = false, Attendees = 0, Address = "1234 Jojolands", Email = "NateSoRealEmail@gmail.com"}
                 );
         }
     }

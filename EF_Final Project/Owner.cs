@@ -16,5 +16,30 @@ namespace EF_Final_Project
         {
             InitializeComponent();
         }
+
+        private void btnScheduleEnter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCheckSchedule_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnScheduleChange_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.tcLogin = new System.Windows.Forms.TabControl();
             this.tpSign = new System.Windows.Forms.TabPage();
+            this.lblError = new System.Windows.Forms.Label();
             this.txtLast = new System.Windows.Forms.TextBox();
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.txtPasswordAgain = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tpLogin = new System.Windows.Forms.TabPage();
+            this.lblLoginError = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPassword2 = new System.Windows.Forms.TextBox();
@@ -65,6 +67,7 @@
             // 
             // tpSign
             // 
+            this.tpSign.Controls.Add(this.lblError);
             this.tpSign.Controls.Add(this.txtLast);
             this.tpSign.Controls.Add(this.txtFirst);
             this.tpSign.Controls.Add(this.txtPasswordAgain);
@@ -84,44 +87,58 @@
             this.tpSign.Text = "Sign Up";
             this.tpSign.UseVisualStyleBackColor = true;
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(293, 373);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 15);
+            this.lblError.TabIndex = 11;
+            // 
             // txtLast
             // 
-            this.txtLast.Location = new System.Drawing.Point(319, 317);
+            this.txtLast.Location = new System.Drawing.Point(292, 288);
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(161, 23);
             this.txtLast.TabIndex = 10;
+            this.txtLast.Text = "Potter";
             // 
             // txtFirst
             // 
-            this.txtFirst.Location = new System.Drawing.Point(319, 251);
+            this.txtFirst.Location = new System.Drawing.Point(292, 222);
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(161, 23);
             this.txtFirst.TabIndex = 9;
+            this.txtFirst.Text = "Harry";
             // 
             // txtPasswordAgain
             // 
-            this.txtPasswordAgain.Location = new System.Drawing.Point(319, 197);
+            this.txtPasswordAgain.Location = new System.Drawing.Point(292, 168);
             this.txtPasswordAgain.Name = "txtPasswordAgain";
             this.txtPasswordAgain.Size = new System.Drawing.Size(161, 23);
             this.txtPasswordAgain.TabIndex = 8;
+            this.txtPasswordAgain.Text = "12345678";
             // 
             // txtPassword1
             // 
-            this.txtPassword1.Location = new System.Drawing.Point(319, 138);
+            this.txtPassword1.Location = new System.Drawing.Point(292, 109);
             this.txtPassword1.Name = "txtPassword1";
             this.txtPassword1.Size = new System.Drawing.Size(161, 23);
             this.txtPassword1.TabIndex = 7;
+            this.txtPassword1.Text = "12345678";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(319, 75);
+            this.txtEmail.Location = new System.Drawing.Point(292, 46);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(161, 23);
             this.txtEmail.TabIndex = 6;
+            this.txtEmail.Text = "Theboywholived@gmail.com";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(319, 357);
+            this.btnSubmit.Location = new System.Drawing.Point(292, 328);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 5;
@@ -132,7 +149,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(319, 299);
+            this.label5.Location = new System.Drawing.Point(292, 270);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 15);
             this.label5.TabIndex = 4;
@@ -141,7 +158,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(320, 233);
+            this.label4.Location = new System.Drawing.Point(293, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 15);
             this.label4.TabIndex = 3;
@@ -150,7 +167,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(320, 179);
+            this.label3.Location = new System.Drawing.Point(293, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 15);
             this.label3.TabIndex = 2;
@@ -159,7 +176,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(320, 120);
+            this.label2.Location = new System.Drawing.Point(293, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 1;
@@ -168,7 +185,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(320, 57);
+            this.label1.Location = new System.Drawing.Point(293, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 15);
             this.label1.TabIndex = 0;
@@ -176,6 +193,7 @@
             // 
             // tpLogin
             // 
+            this.tpLogin.Controls.Add(this.lblLoginError);
             this.tpLogin.Controls.Add(this.label8);
             this.tpLogin.Controls.Add(this.label7);
             this.tpLogin.Controls.Add(this.txtPassword2);
@@ -189,6 +207,15 @@
             this.tpLogin.TabIndex = 1;
             this.tpLogin.Text = "Login";
             this.tpLogin.UseVisualStyleBackColor = true;
+            // 
+            // lblLoginError
+            // 
+            this.lblLoginError.AutoSize = true;
+            this.lblLoginError.ForeColor = System.Drawing.Color.Red;
+            this.lblLoginError.Location = new System.Drawing.Point(332, 310);
+            this.lblLoginError.Name = "lblLoginError";
+            this.lblLoginError.Size = new System.Drawing.Size(0, 15);
+            this.lblLoginError.TabIndex = 6;
             // 
             // label8
             // 
@@ -280,5 +307,7 @@
         private TextBox txtUsername;
         private Button btnLogin;
         private Label label6;
+        private Label lblError;
+        private Label lblLoginError;
     }
 }
