@@ -30,6 +30,7 @@ namespace Final_Project
 
         public Login(int loginId, string firstName, string lastName, string password, bool confirmPassword, string email, int attendees, string address, DateTime timeOfMeeting)
         {
+
             LoginId = loginId;
             FirstName = firstName;
             LastName = lastName;

@@ -1,9 +1,10 @@
-namespace Final_Project
+ namespace Final_Project
 {
     public partial class Form1 : Form
     {
         AppInformation userDb;
         List<Login> userList;
+
         public Form1()
         {
             userDb = new AppInformation();
@@ -25,7 +26,7 @@ namespace Final_Project
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Login addUser = new Login { Email = txtEmail.Text, Password = txtPassword1.Text, ConfirmPassword = false, FirstName = txtFirst.Text, LastName = txtLast.Text};
+            Login addUser = new()  { Email = txtEmail.Text, Password = txtPassword1.Text, ConfirmPassword = false, FirstName = txtFirst.Text, LastName = txtLast.Text};
 
             string password1 = txtPassword1.Text;
             string password2 = txtPassword2.Text;
