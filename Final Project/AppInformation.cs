@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
-    internal class AppInformation : DbContext
+    internal class AppInformation  : DbContext
     {
         public DbSet<Login> myUser { get; set; }
 

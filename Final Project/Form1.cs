@@ -21,19 +21,47 @@
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string userName = txtUsername.Text;
+            string password2 = txtPassword2.Text;
+           
+                userList = userDb.myUser.Where(c => c.Email == userName).Where(c => c.Password == password2).ToList();
 
+            try
+            {
+                foreach (Login user in userList)
+                {
+                    if (userName == "NateSoRealEmail@gmail.com" && password2 == "WhyAreYouLooking")
+                    {
+                        Owner userLogin = new Owner();
+                        userLogin.ShowDialog();
+                    }
+                    else if (userName == Email && password2 == Password)
+                    {
+                        User owner = new User();
+                        owner.ShowDialog();
+                    }
+                    else
+                    {
+                        lblError.Text = "Email or Password dose not match";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Login addUser = new()  { Email = txtEmail.Text, Password = txtPassword1.Text, ConfirmPassword = false, FirstName = txtFirst.Text, LastName = txtLast.Text};
+            Login addUser = new()  { FirstName = txtFirst.Text, LastName = txtLast.Text, Password = txtPassword1.Text, ConfirmPassword = false, Email = txtEmail.Text, Attendees = 0, Address = "1111 Cat"};
 
             string password1 = txtPassword1.Text;
-            string password2 = txtPassword2.Text;
+            string confirmPassword = txtPasswordAgain.Text;
 
             try
             {
-                if (password1 == password2)
+                if (password1 == confirmPassword)
                 {
                     userDb.myUser.Add(addUser);
                     userDb.SaveChanges();
