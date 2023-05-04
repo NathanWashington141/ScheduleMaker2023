@@ -79,5 +79,3 @@
         }
     }
 }
-
-// https://www.dotnetstuffs.com/how-to-close-form1-and-open-form2-c-sharp/

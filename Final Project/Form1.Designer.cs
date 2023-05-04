@@ -102,7 +102,6 @@
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(161, 23);
             this.txtLast.TabIndex = 10;
-            this.txtLast.Text = "Potter";
             // 
             // txtFirst
             // 
@@ -110,7 +109,6 @@
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(161, 23);
             this.txtFirst.TabIndex = 9;
-            this.txtFirst.Text = "Harry";
             // 
             // txtPasswordAgain
             // 
@@ -118,7 +116,6 @@
             this.txtPasswordAgain.Name = "txtPasswordAgain";
             this.txtPasswordAgain.Size = new System.Drawing.Size(161, 23);
             this.txtPasswordAgain.TabIndex = 8;
-            this.txtPasswordAgain.Text = "12345678";
             // 
             // txtPassword1
             // 
