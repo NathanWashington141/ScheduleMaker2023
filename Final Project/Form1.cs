@@ -24,26 +24,25 @@
             string userName = txtUsername.Text;
             string password2 = txtPassword2.Text;
            
-                userList = userDb.myUser.Where(c => c.Email == userName).Where(c => c.Password == password2).ToList();
+            userList = userDb.myUser.Where(c => c.Email == userName).Where(c => c.Password == password2).ToList();
+            Login? loginPassword = userDb.myUser.FirstOrDefault(email => email.Email.Equals(userName) && email.Password == password2);
 
             try
             {
-                foreach (Login user in userList)
+                if (userName == "NateSoRealEmail@gmail.com" && password2 == "WhyAreYouLooking")
                 {
-                    if (userName == "NateSoRealEmail@gmail.com" && password2 == "WhyAreYouLooking")
-                    {
-                        Owner userLogin = new Owner();
-                        userLogin.ShowDialog();
-                    }
-                    else if (userName == Email && password2 == Password)
-                    {
-                        User owner = new User();
-                        owner.ShowDialog();
-                    }
-                    else
-                    {
-                        lblError.Text = "Email or Password dose not match";
-                    }
+                    Owner userLogin = new Owner();
+                    userLogin.ShowDialog();
+
+                }
+                else if (loginPassword != default)
+                {
+                    User owner = new User();
+                    owner.ShowDialog();
+                }
+                else
+                {
+                     lblError.Text = "Email or Password dose not match";
                 }
             }
             catch (Exception ex)
