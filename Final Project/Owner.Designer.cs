@@ -87,7 +87,7 @@
             this.tabControl1.Location = new System.Drawing.Point(9, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(826, 637);
+            this.tabControl1.Size = new System.Drawing.Size(846, 637);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -111,8 +111,9 @@
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblWelcome.Location = new System.Drawing.Point(6, 17);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(0, 40);
+            this.lblWelcome.Size = new System.Drawing.Size(227, 40);
             this.lblWelcome.TabIndex = 2;
+            this.lblWelcome.Text = "Welcome Admin";
             // 
             // lblAppointment
             // 
@@ -280,7 +281,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(818, 609);
+            this.tabPage3.Size = new System.Drawing.Size(838, 609);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check Schedule";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -397,9 +398,9 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(654, 363);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 15);
+            this.label15.Size = new System.Drawing.Size(181, 15);
             this.label15.TabIndex = 31;
-            this.label15.Text = "Email";
+            this.label15.Text = "Email (Email must stay the same)";
             // 
             // lblScheduleUpdate
             // 
@@ -507,7 +508,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 655);
+            this.ClientSize = new System.Drawing.Size(867, 655);
             this.Controls.Add(this.tabControl1);
             this.Name = "Owner";
             this.Text = "Owner";

@@ -42,12 +42,12 @@
                 }
                 else
                 {
-                     lblError.Text = "Email or Password dose not match";
+                    lblLoginError.Text = "Email or Password dose not match";
                 }
             }
             catch (Exception ex)
             {
-                lblError.Text = ex.Message;
+                lblLoginError.Text = ex.Message;
             }
         }
 

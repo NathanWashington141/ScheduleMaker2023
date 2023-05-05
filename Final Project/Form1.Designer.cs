@@ -123,7 +123,6 @@
             this.txtPassword1.Name = "txtPassword1";
             this.txtPassword1.Size = new System.Drawing.Size(161, 23);
             this.txtPassword1.TabIndex = 7;
-            this.txtPassword1.Text = "12345678";
             // 
             // txtEmail
             // 
@@ -131,7 +130,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(161, 23);
             this.txtEmail.TabIndex = 6;
-            this.txtEmail.Text = "Theboywholived@gmail.com";
             // 
             // btnSubmit
             // 
@@ -238,7 +236,6 @@
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.Size = new System.Drawing.Size(146, 23);
             this.txtPassword2.TabIndex = 3;
-            this.txtPassword2.Text = "WhyAreYouLooking";
             // 
             // txtUsername
             // 
@@ -246,7 +243,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(146, 23);
             this.txtUsername.TabIndex = 2;
-            this.txtUsername.Text = "NateSoRealEmail@gmail.com";
             // 
             // btnLogin
             // 

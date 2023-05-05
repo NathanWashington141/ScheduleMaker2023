@@ -34,8 +34,6 @@ namespace Final_Project
             {
                 foreach (Login user in userList)
                 {
-                    lblWelcome.Text = $"Welcome {user.FirstName} {user.LastName}";
-
                     lblAppointment.Text = user.ToString();
                 }
             }
@@ -52,20 +50,29 @@ namespace Final_Project
             int attendeesSchedule = Convert.ToInt32(txtAttendessSchedule.Text);
             string addressSchedule = txtAddressSchedule.Text;
             DateTime startingDate = Convert.ToDateTime(txtDateSchedule.Text);
+
             try
             {
-                Login addUser = new() { FirstName = txtFirstSchedule.Text, LastName = "None", Password = "None", ConfirmPassword = false, Email = txtEmailSchedule.Text, Attendees = Convert.ToInt32(txtAttendessSchedule), Address = txtAddressSchedule.Text, TimeOfMeeting = DateTime.Parse(txtDateSchedule.Text) };
-
-                userDb.myUser.Add(addUser);
-                userDb.SaveChanges();
-                foreach (Login user in userList)
+                Login newMeeting = new Login
                 {
-                    lblOutput.Text += user.ToString();
-                }
+                    FirstName = firstNameSchedule,
+                    Email = emailSchedule,
+                    Attendees = attendeesSchedule,
+                    Address = addressSchedule,
+                    TimeOfMeeting = startingDate,
+                };
+
+                userDb.myUser.Add(newMeeting);
+                userDb.SaveChanges();
+
+                lblOutput.Text = "Meeting have been made.";
+                lblOutput.ForeColor = Color.Green;
+                
             }
-            catch (Exception ex)
+            catch 
             {
-                lblOutput.Text = ex.Message;
+                lblOutput.Text = "Error";
+                lblOutput.ForeColor = Color.Red;
             }
         }
 
@@ -73,12 +80,17 @@ namespace Final_Project
         {
             DateTime seeDate = Convert.ToDateTime(txtSchedule.Text);
 
-            Login? dateShow = userDb.myUser.Where(c => c.TimeOfMeeting == seeDate).Select(c => c).FirstOrDefault();
+            lblScheduleDate.Text = "";
+
+            Login? dateShow = userDb.myUser.Where(c => c.TimeOfMeeting.Date == seeDate.Date).Select(c => c).FirstOrDefault();
 
             foreach (Login user in userList)
             {
 
-                lblScheduleDate.Text = user.ToString();
+                lblScheduleDate.Text = $"{user.FirstName}\n" +
+                   $"At this date {user.TimeOfMeeting}\n" +
+                   $"There are {user.Attendees} people coming\n" +
+                   $"At this Address {user.Address}\n";
                 openForm();
             }
         }
@@ -88,43 +100,38 @@ namespace Final_Project
             DateTime BeginDate = DateTime.Parse(txtBeginDate.Text);
             DateTime EndDate = DateTime.Parse(txtEndDate.Text);
 
+            lblPersonSchedule.Text = "";
+
             foreach (Login user in userList)
             {
-                lblPersonSchedule.Text += user.ToString();
+                lblPersonSchedule.Text = $"{user.FirstName}\n" +
+                   $"At this date {user.TimeOfMeeting}\n" +
+                   $"There are {user.Attendees} people coming\n" +
+                   $"At this Address {user.Address}\n";
             }
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            //string deleteDate = txtDelete.Text;
+            string deleteDate = txtDelete.Text;
 
-            //int emailIdDelete = userDb.myUser.Select();
+            Login? updateList = userDb.myUser.FirstOrDefault(u => u.Email == deleteDate);
 
-            //foreach (Login user in userList)
-            //{
-            //    if (deleteDate == user.Email)
-            //    {
-                    
-            //    }
-            //}
-
-            //Login? deleteDate = userDb.myUser.Find();
-
-            //if (deleteDate != null)
-            //{
-            //    try
-            //    {
-            //        userDb.myUser.Remove();
-            //        userDb.SaveChanges();
-            //        lblDeleted.Visible = true;
-            //    }
-            //    catch
-            //    {
-            //        lblDeleted.Text = "Error";
-            //        lblDeleted.ForeColor = Color.Red;
-            //        lblDeleted.Visible = true;
-            //    }
-            //}
+            if (updateList != null)
+            {
+                try
+                {
+                    userDb.myUser.Remove(updateList);
+                    userDb.SaveChanges();
+                    lblDeleted.Visible = true;
+                }
+                catch
+                {
+                    lblDeleted.Text = "Error";
+                    lblDeleted.ForeColor = Color.Red;
+                    lblDeleted.Visible = true;
+                }
+            }
         }
 
         private void btnScheduleChange_Click(object sender, EventArgs e)
@@ -139,31 +146,28 @@ namespace Final_Project
 
             string emailUp = txtEmailUp.Text;
 
-            Login? updateName = userDb.myUser.Find(nameUp);
+            Login? updatePerson = userDb.myUser.SingleOrDefault(p => p.Email == emailUp);
 
-            Login? updateTime = userDb.myUser.Find(dateTimeUp);
-
-            Login? updateAttendees = userDb.myUser.Find(attendeesUp);
-
-            Login? updateAddress = userDb.myUser.Find(addressUp);
-
-            Login? updateEmail = userDb.myUser.Find(emailUp);
-
-            if (updateName != null && updateTime != null && updateAttendees != null && updateAddress != null && updateEmail != null)
-            {
-                try
+                if (updatePerson != null)
                 {
-                    userDb.myUser.Add(updateEmail);
-                    userDb.SaveChanges();
-                    lblDeleted.Visible = true;
+                    try
+                    {
+                        updatePerson.FirstName = nameUp;
+                        updatePerson.TimeOfMeeting= dateTimeUp;
+                        updatePerson.Attendees = attendeesUp;
+                        updatePerson.Address = addressUp;
+                        updatePerson.Email = emailUp;
+
+                        userDb.SaveChanges();
+                        lblScheduleUpdate.Visible = true;
+                    }
+                    catch
+                    {
+                        lblScheduleUpdate.Text = "Error";
+                        lblScheduleUpdate.ForeColor = Color.Red;
+                        lblScheduleUpdate.Visible = true;
+                    }
                 }
-                catch
-                {
-                    lblDeleted.Text = "Error";
-                    lblDeleted.ForeColor = Color.Red;
-                    lblDeleted.Visible = true;
-                }
-            }
         }
     }
 }

@@ -47,6 +47,14 @@
             this.txtFirstSchedule = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAddressUp = new System.Windows.Forms.TextBox();
+            this.txtStartingUp = new System.Windows.Forms.TextBox();
+            this.txtAttendeesUp = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNameUp = new System.Windows.Forms.TextBox();
             this.btnCheckSchedule = new System.Windows.Forms.Button();
             this.lblDeleted = new System.Windows.Forms.Label();
             this.txtDelete = new System.Windows.Forms.TextBox();
@@ -55,7 +63,7 @@
             this.lblScheduleDate = new System.Windows.Forms.Label();
             this.txtSchedule = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtEmailUp = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.lblScheduleUpdate = new System.Windows.Forms.Label();
             this.btnScheduleChange = new System.Windows.Forms.Button();
@@ -97,8 +105,9 @@
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblWelcome.Location = new System.Drawing.Point(6, 12);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(0, 40);
+            this.lblWelcome.Size = new System.Drawing.Size(200, 40);
             this.lblWelcome.TabIndex = 4;
+            this.lblWelcome.Text = "Welcome User";
             // 
             // lblAppointment
             // 
@@ -237,6 +246,14 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label100);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.txtAddressUp);
+            this.tabPage3.Controls.Add(this.txtStartingUp);
+            this.tabPage3.Controls.Add(this.txtAttendeesUp);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.txtNameUp);
             this.tabPage3.Controls.Add(this.btnCheckSchedule);
             this.tabPage3.Controls.Add(this.lblDeleted);
             this.tabPage3.Controls.Add(this.txtDelete);
@@ -245,7 +262,7 @@
             this.tabPage3.Controls.Add(this.lblScheduleDate);
             this.tabPage3.Controls.Add(this.txtSchedule);
             this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.txtEmail);
+            this.tabPage3.Controls.Add(this.txtEmailUp);
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.lblScheduleUpdate);
             this.tabPage3.Controls.Add(this.btnScheduleChange);
@@ -256,6 +273,70 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check Schedule";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(501, 212);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(49, 15);
+            this.label100.TabIndex = 61;
+            this.label100.Text = "Address";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(325, 212);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 15);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "Attendees";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(151, 212);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 15);
+            this.label7.TabIndex = 59;
+            this.label7.Text = "Starting Date";
+            // 
+            // txtAddressUp
+            // 
+            this.txtAddressUp.Location = new System.Drawing.Point(501, 230);
+            this.txtAddressUp.Name = "txtAddressUp";
+            this.txtAddressUp.Size = new System.Drawing.Size(137, 23);
+            this.txtAddressUp.TabIndex = 58;
+            // 
+            // txtStartingUp
+            // 
+            this.txtStartingUp.Location = new System.Drawing.Point(151, 230);
+            this.txtStartingUp.Name = "txtStartingUp";
+            this.txtStartingUp.Size = new System.Drawing.Size(141, 23);
+            this.txtStartingUp.TabIndex = 57;
+            // 
+            // txtAttendeesUp
+            // 
+            this.txtAttendeesUp.Location = new System.Drawing.Point(325, 230);
+            this.txtAttendeesUp.Name = "txtAttendeesUp";
+            this.txtAttendeesUp.Size = new System.Drawing.Size(147, 23);
+            this.txtAttendeesUp.TabIndex = 56;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 212);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 15);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "First Name";
+            // 
+            // txtNameUp
+            // 
+            this.txtNameUp.Location = new System.Drawing.Point(20, 230);
+            this.txtNameUp.Name = "txtNameUp";
+            this.txtNameUp.Size = new System.Drawing.Size(123, 23);
+            this.txtNameUp.TabIndex = 54;
             // 
             // btnCheckSchedule
             // 
@@ -326,26 +407,26 @@
             this.label10.TabIndex = 45;
             this.label10.Text = "Enter the date of Schedule";
             // 
-            // txtEmail
+            // txtEmailUp
             // 
-            this.txtEmail.Location = new System.Drawing.Point(19, 216);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(149, 23);
-            this.txtEmail.TabIndex = 44;
+            this.txtEmailUp.Location = new System.Drawing.Point(653, 230);
+            this.txtEmailUp.Name = "txtEmailUp";
+            this.txtEmailUp.Size = new System.Drawing.Size(149, 23);
+            this.txtEmailUp.TabIndex = 44;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(19, 198);
+            this.label15.Location = new System.Drawing.Point(653, 212);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 15);
+            this.label15.Size = new System.Drawing.Size(181, 15);
             this.label15.TabIndex = 43;
-            this.label15.Text = "Email";
+            this.label15.Text = "Email (Email must stay the same)";
             // 
             // lblScheduleUpdate
             // 
             this.lblScheduleUpdate.AutoSize = true;
-            this.lblScheduleUpdate.Location = new System.Drawing.Point(184, 264);
+            this.lblScheduleUpdate.Location = new System.Drawing.Point(161, 264);
             this.lblScheduleUpdate.Name = "lblScheduleUpdate";
             this.lblScheduleUpdate.Size = new System.Drawing.Size(152, 15);
             this.lblScheduleUpdate.TabIndex = 40;
@@ -398,7 +479,7 @@
         private Label label2;
         private TextBox txtAddress;
         private Label label7;
-        private TextBox txtEmail;
+        private TextBox txtEmailUp;
         private Label label6;
         private TextBox txtFirstSchedule;
         private Label label8;
@@ -424,6 +505,11 @@
         private TextBox txtStarting;
         private Label lblScheduleDate;
         private Button btnCheckSchedule;
+        private Label label100;
+        private TextBox txtAddressUp;
+        private TextBox txtStartingUp;
+        private TextBox txtAttendeesUp;
+        private TextBox txtNameUp;
         //private Button btnSeeSchedule;
     }
 }
